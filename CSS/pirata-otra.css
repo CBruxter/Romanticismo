@@ -1,0 +1,43 @@
+/********************************************/
+/* Web del Romanticismo                     */
+/* Hojas de estilo de la canción del pirata */
+/* Autor: Miguel Ángel Ávila Rosas          */
+/* Version: 2.0                             */
+/* Creado el: 4 de noviembre de 2022        */
+/* Actualizado el: 4 de noviembre de 2022   */
+/********************************************/
+
+@font-face {
+    font-family: wunder;
+    src: url(../Fonts/Wunderlust\ \(free\).otf);
+}
+
+@font-face {
+    font-family: star;
+    src: url(../Fonts/StarTrack\ \(free\ for\ personal\ use\).otf);
+}
+
+body {font-family: wunder;
+      background-image: url(../Imagenes/photo-background/Pirate-Background.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 120vh;
+     }
+
+#alineacion{margin-left: 57%;}
+
+h1 {
+    font-family: wunder;
+   }
+p {
+   font-family: star;
+  }
+.fa {font-size: 200% !important;}
+.fa-facebook-square {color: #3B5998;}
+
+a{text-decoration: none; color: rgb(32, 117, 202);}
+
+a:hover {color: rgb(78, 41, 41);}
+
+@media only screen and (width<=900px){
+}

@@ -1,0 +1,67 @@
+/********************************************/
+/* Web del Romanticismo                     */
+/* Hojas de estilo para autores             */
+/* Autor: Miguel Ángel Ávila Rosas          */
+/* Version: 1.0                             */
+/* Creado el: 21 de octubre de 2022         */
+/* Actualizado el: 28 de octubre de 2022    */
+/********************************************/
+
+/* ESTILO GENERAL */  
+@font-face {
+src: url('../Fonts/Christmas\ Chimney.ttf');
+font-family: titulos;
+}
+
+@font-face {
+src: url('../Fonts/RobotoCondensed-Regular.ttf');
+font-family: textos;
+}
+
+* {box-sizing: border-box;} /*En width debe contar desde el borde hacia dentro.*/
+
+body { margin: 0%;padding: 0%; /*Para qitar el color del fondillo*/
+font-family: textos;
+/*padding: 3%; no necesito un padding con un layaout single colum */
+background-color: rgb(214, 183, 239);
+}
+
+#wrapper {
+background-color: white;
+width: 100%;
+margin: 0 auto;
+}
+
+h1,h2,h3 {
+font-family: titulos;
+border-bottom: 2px solid aqua;
+width: 75%;
+text-align: center;
+margin:auto;
+margin-bottom: 50px;
+}
+
+#espronceda {
+float: left; /*Para que la imagen tenga texto alrededor*/
+margin-right: 0%; /*separa el texto hasta donde le digas*/
+width: 100%;
+padding: 2% 2% 10% 2%;
+}
+
+p {
+text-align: justify;
+}
+
+#limpiar {clear: both;}
+
+/*Para tablet*/
+@media only screen and (width>=500px){ #espronceda{ width: 50%; } }
+
+/*Para ordenador*/
+@media only screen and (width>=900px){ 
+#espronceda {
+             margin-right: 30px; /*separa el texto hasta donde le digas*/
+             width: 30%;
+            }
+#wrapper {width: 80%;}
+}
