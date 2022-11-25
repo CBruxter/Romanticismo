@@ -4,7 +4,7 @@
 /* Autor: Miguel Ángel Ávila Rosas          */
 /* Version: 2.0                             */
 /* Creado el: 11 de noviembre de 2022       */
-/* Actualizado el: 18 de noviembre de 2022  */
+/* Actualizado el: 25 de noviembre de 2022  */
 /********************************************/
 
 /* ESTILO GENERAL */
@@ -26,6 +26,8 @@ h1,h2,h3 {
         margin:auto;
         margin-bottom: 50px;
         }
+
+*{box-sizing: border-box;}
 
 p {
     text-align: justify;
@@ -118,13 +120,96 @@ margin: auto;}
 
          }
 
-#intro {
-        background-color: #ff5500;
+.titulo-seccion {
+                 font-family: titulos;
+                 font-size: 2rem;
+                 color: rgb(0, 98, 98);
+                 padding-top: 40px;
+                 padding-bottom: 40px;/*margin mueve todo el bloque, y padding solo el texto*/
+                 /*Es importante de que la scción se separe para que auede bien*/
+                 text-align: center;
+                }
+
+/*GRID IDEAS*/
+#ideas { background-color: lightgray;}
+
+.grid2 {display: grid;
+        /*Vamos a montar un grid en 2 columnas al 50%, para esto necesito primero un contenedor GRID*/
+        grid-template-columns: 50% 50%;/*Tambien se puede usar "auto" en vez del 50%*/
+        
        }
 
+.col2 img {width: 100%;
+          }
+
+.espacio {padding: 2%;}
+
+#derecha {float: right;
+         }
+
+#izquierda {float: left;}
+
+#abajo {padding-bottom: 10vh;}
+
+/*Selecciono las imagenes dentro de una columna y les aplico el 100% que es el ancho total de la columna*/
+/*GRID AUTORES*/
+
+.grid3 {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    padding-left: 5%;
+    padding-bottom: 3%;
+   }
+
+.cuadros {
+      width: 80%;
+      padding: 2vh;
+     }
+#autores {background-color: white;}
+
+.card {
+       box-shadow: 0 4px 8px 0 black;
+       transition: 1s;
+       padding: 5%;
+
+      }
+.card:hover {
+    box-shadow: 0 8px 16px black;
+}
+.card img {width: 100%; border-radius: 50%; filter: sepia(); opacity: 0.75; transition: 2s;}
+.card img:hover {opacity: 1;}
+.container { 
+            padding: 2px 16px;
+            margin-top: -8px;
+           }
+#quijote {font-size: 0.5rem;}
+#becquer { height: 75%;}
+#larra { height: 75%;}
+#zorrilla {height: 75%;}
+
+/*Footer*/
+.grid4 {display: grid;
+        grid-template-columns: 25% 25% 50%;
+        padding-bottom: 3%;
+        padding-top: 3%;
+        background-color: rgba(255, 255, 255,0.5);
+       }
+#ancha {width: 90%;}
+.baja {width: 92%;}
+
+.boton {text-decoration: none;
+        color: white;
+        font-weight: bold;
+        background-color: black;
+        padding: 5px 10px; /*El oredenes: arriba abajo izquierda y derecha*/
+        border-radius: 5%; 
+       }
+
+.boton:hover {background-color: gray;}
+
 /*MEDIA QUARIES*/
-@media only screen and (width <= 1800px){
-    #wrapper {width: 90%;}
+/*Tablet*/
+@media only screen and (width <= 1000px){
 
     #titulo {
              width: 35%;
@@ -135,9 +220,15 @@ margin: auto;}
     #titulo2 {
               width: 40%;
              }
+    #grid2 {grid-template-columns: 100%;}
+    .grid3 {grid-template-columns: 50% 50%;}
+    .grid4 {grid-template-columns: 50% 50%;}
+    #ancha {margin-left: 45%;
+            padding-bottom:5% ;
+            width: 100%;}
 }
-
-@media only screen and (width <= 1200px){
+/*Movil*/
+@media only screen and (width <= 600px){
     #wrapper {width: 100%;}
 
     #titulo {
@@ -149,4 +240,8 @@ margin: auto;}
     #titulo2 {
               width: 40%;
              }
+    .grid3 {grid-template-columns: 100%;}
+    .grid4 {grid-template-columns: 100%;}
+    #ancha {margin-left: 0%;
+            width: 100%;}
 }
